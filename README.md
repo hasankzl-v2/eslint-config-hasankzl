@@ -41,7 +41,7 @@ npm install -D \
 Create an `eslint.config.js` file in the root of your project:
 
 ```js
-import baseConfig from "eslint-config-hasankzl";
+import baseConfig from "prettier-eslint-config-hasankzl";
 
 export default baseConfig;
 ```
@@ -49,7 +49,7 @@ export default baseConfig;
 Optional: Override or extend rules
 
 ```js
-import baseConfig from "eslint-config-hasankzl";
+import baseConfig from "prettier-eslint-config-hasankzl";
 
 export default [
   ...baseConfig,
