@@ -1,6 +1,6 @@
 # eslint-config-hasankzl
 
-A modern, reusable ESLint Flat Config for TypeScript + React projects 
+A modern, reusable ESLint Flat Config for TypeScript + React projects
 with sensible defaults, Prettier integration, and powerful plugins like `unicorn`, `sonarjs`, and `unused-imports`.
 
 ## ✨ Features
@@ -35,30 +35,28 @@ npm install -D \
   eslint-config-hasankzl
 
 ```
+
 ## ⚙️ Usage
 
 Create an `eslint.config.js` file in the root of your project:
 
 ```js
-import baseConfig from 'eslint-config-hasankzl';
+import baseConfig from "eslint-config-hasankzl";
 
 export default baseConfig;
 ```
 
-
 Optional: Override or extend rules
 
 ```js
-import baseConfig from 'eslint-config-hasankzl';
-
+import baseConfig from "eslint-config-hasankzl";
 
 export default [
   ...baseConfig,
-   // Add or override custom rules here
+  // Add or override custom rules here
   {
     rules: {
-      'no-console': 'warn',
-
+      "no-console": "warn",
     },
   },
 ];
