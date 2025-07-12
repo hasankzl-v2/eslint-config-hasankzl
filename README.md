@@ -1,4 +1,4 @@
-# eslint-config-hasankzl
+# prettier-eslint-config-hasankzl
 
 A modern, reusable ESLint Flat Config for TypeScript + React projects
 with sensible defaults, Prettier integration, and powerful plugins like `unicorn`, `sonarjs`, and `unused-imports`.
