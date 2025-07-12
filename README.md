@@ -8,7 +8,6 @@ with sensible defaults, Prettier integration, and powerful plugins like `unicorn
 - ✅ TypeScript support with strict linting
 - ⚛️ React & React Hooks rules
 - 🎨 Prettier formatting integration
-- 🧹 Auto-removal of unused imports and variables
 - 🦄 Modern JS best practices with `eslint-plugin-unicorn`
 - 🔍 Code quality enhancements via `eslint-plugin-sonarjs`
 - 📐 Organized import sorting
@@ -63,4 +62,12 @@ export default [
     },
   },
 ];
+```
+
+Useful scripts
+
+```
+    "lint": "eslint .",
+    "lint:format": "eslint . --fix",
+    "prettier:format": "prettier --write .",
 ```
