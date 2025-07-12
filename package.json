@@ -1,10 +1,17 @@
 {
   "name": "prettier-eslint-config-hasankzl",
-  "version": "1.0.5",
+  "version": "1.0.12",
   "type": "module",
   "main": "eslint.config.js",
+  "files": [
+    "eslint.config.js",
+    "eslint.config.d.ts",
+    "prettier.config.js",
+    "prettier.config.d.ts"
+  ],
   "exports": {
-    ".": "./eslint.config.js"
+    ".": "./eslint.config.js",
+    "./prettier.config.js": "./prettier.config.js"
   },
   "license": "MIT",
   "repository": {
