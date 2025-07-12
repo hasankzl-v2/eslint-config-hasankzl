@@ -8,10 +8,10 @@ import sonarjs from "eslint-plugin-sonarjs";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import globals from "globals";
-import eslintConfigPrettier from "eslint-config-prettier";
+import prettierConfig from './prettier.config.js'
 export default [
   {
-    ignores: ["dist", "build", "node_modules"],
+    ignores: ["dist", "build", "node_modules","vite.config.ts"],
   },
   {
     files: ["**/*.{ts,tsx}"],
@@ -47,10 +47,8 @@ export default [
       ...reactHooks.configs.recommended.rules,
       ...sonarjs.configs.recommended.rules,
       ...prettierPlugin.configs.recommended.rules,
-      ...eslintConfigPrettier.rules,
-      "prettier/prettier": "error",
+      'prettier/prettier': ['error', prettierConfig],
       "unicorn/prefer-logical-operator-over-ternary": "error",
-      "unicorn/filename-case": ["warn", { case: "pascalCase" }],
       "unicorn/prefer-ternary": "warn",
       "unicorn/no-abusive-eslint-disable": "error",
       "unicorn/no-useless-undefined": "warn",
