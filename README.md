@@ -32,7 +32,7 @@ npm install -D \
   eslint-plugin-unused-imports \
   eslint-plugin-import \
   eslint-plugin-sonarjs \
-  eslint-config-hasankzl
+  prettier-eslint-config-hasankzl
 
 ```
 
