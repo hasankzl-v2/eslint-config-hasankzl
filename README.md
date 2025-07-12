@@ -1,26 +1,31 @@
-# prettier-eslint-config-hasankzl
+# 🛠️ prettier-eslint-config-hasankzl
 
-A modern, reusable ESLint Flat Config for TypeScript + React projects
-with sensible defaults, Prettier integration, and powerful plugins like `unicorn`, `sonarjs`, and `unused-imports`.
+A modern, reusable ESLint Flat Config for TypeScript + React projects 
+
+with **Prettier** integration and powerful plugins like `unicorn`, `sonarjs`, and `unused-imports`.
+
+---
 
 ## ✨ Features
 
-- ✅ TypeScript support with strict linting
-- ⚛️ React & React Hooks rules
-- 🎨 Prettier formatting integration
-- 🦄 Modern JS best practices with `eslint-plugin-unicorn`
-- 🔍 Code quality enhancements via `eslint-plugin-sonarjs`
-- 📐 Organized import sorting
+- ✅ **Strict TypeScript** support
+- ⚛️ **React** & **React Hooks** best practices
+- 🎨 **Prettier** formatting integration
+- 🦄 **Modern JavaScript** patterns via `eslint-plugin-unicorn`
+- 🔍 **Code quality** insights with `eslint-plugin-sonarjs`
+- 📦 **Dead code removal** using `eslint-plugin-unused-imports`
+- 📐 **Organized imports** using `eslint-plugin-import`
 
 ---
 
 ## 🚀 Installation
 
-Install all required dependencies:
+Install the required peer dependencies in your project:
 
 ```bash
 npm install -D \
   eslint \
+  prettier \
   typescript \
   @typescript-eslint/eslint-plugin \
   @typescript-eslint/parser \
@@ -33,7 +38,6 @@ npm install -D \
   eslint-plugin-import \
   eslint-plugin-sonarjs \
   prettier-eslint-config-hasankzl
-
 ```
 
 ## ⚙️ Usage
@@ -57,6 +61,46 @@ export default [
   {
     rules: {
       "no-console": "warn",
+    },
+  },
+];
+```
+Create an `prettier.config.js` file in the root of your project:
+
+```js
+import basePrettierrc from 'prettier-eslint-config-hasankzl/prettier.config.js';
+
+export default {
+  ...basePrettierrc,
+};
+
+```
+
+Optional: Override or extend rules
+
+```js
+import basePrettierrc from 'prettier-eslint-config-hasankzl/prettier.config.js';
+
+export default {
+  ...basePrettierrc,
+  printWidth:80
+};
+
+```
+if you decided to override prettier config you should override eslint config aswell
+
+```js
+import baseConfig from 'prettier-eslint-config-hasankzl';
+import prettierConfig from './prettier.config.js';
+import prettierPlugin from 'eslint-plugin-prettier';
+export default [
+  ...baseConfig,
+  {
+    plugins: {
+      prettier: prettierPlugin,
+    },
+    rules: {
+      'prettier/prettier': ['error', prettierConfig],
     },
   },
 ];
