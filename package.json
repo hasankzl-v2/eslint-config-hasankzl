@@ -1,6 +1,6 @@
 {
-  "name": "eslint-config-hasankzl",
-  "version": "1.0.17",
+  "name": "prettier-eslint-config-hasankzl",
+  "version": "1.0.1",
   "type": "module",
   "main": "eslint.config.js",
   "exports": {
@@ -9,7 +9,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hasankzl-v2/eslint-config-hasankzl.git"
+    "url": "https://github.com/hasankzl-v2/prettier-eslint-config-hasankzl.git"
   },
   "keywords": [
     "eslint",
